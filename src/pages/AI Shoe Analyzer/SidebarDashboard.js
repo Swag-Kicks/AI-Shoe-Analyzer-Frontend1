@@ -18,7 +18,7 @@ import { IoIosBusiness } from "react-icons/io";
 import { DiGoogleAnalytics } from "react-icons/di";
 import { FcInspection } from "react-icons/fc";
 
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
+// import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
 
 const navItems = [
   

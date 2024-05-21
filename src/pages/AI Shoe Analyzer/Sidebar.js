@@ -14,7 +14,7 @@ import { FiUpload } from "react-icons/fi";
 import { VscHistory } from "react-icons/vsc";
 import { MdOutlineLogout } from "react-icons/md";
 
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
+// import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
 
 const navItems = [
   { icon: <FiUpload  size="23"/>,text: "Uploading" , path:"/upload"}, //icon: <SettingsIcon />
