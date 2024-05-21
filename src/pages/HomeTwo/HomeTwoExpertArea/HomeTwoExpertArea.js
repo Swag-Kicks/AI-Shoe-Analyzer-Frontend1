@@ -22,10 +22,10 @@ const HomeTwoExpertArea = () => {
                         <div className="expart__tab">
                            <div className="tab-content" id="expart-Content">
                               <div className="tab-pane fade show active" id="philosophy" role="tabpanel" aria-labelledby="philosophy-tab">
-                                 <SingleExpartContent image="1" head1={"Our experts will"} head2={"guide you"} para={"Ready to experience the power of AI Shoe Analyzer firsthand? Sign up now for a personalized demo, where our expert will guide you through our innovative platform. Get ready to unlock the true value of your footwear with AI Shoe Analyzer. Schedule your demo today!"} btn={"Get a Demo"}/>
+                                 <SingleExpartContent Link1={"/contact"} image="1" head1={"Our experts will"} head2={"guide you"} para={"Ready to experience the power of AI Shoe Analyzer firsthand? Sign up now for a personalized demo, where our expert will guide you through our innovative platform. Get ready to unlock the true value of your footwear with AI Shoe Analyzer. Schedule your demo today!"} btn={"Get a Demo"}/>
                               </div>
                               <div className="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
-                                 <SingleExpartContent image="2" head1={"Try It Out"} head2={"Now"} para={"Experience the Power of AI Shoe Analyzer Today!"} btn={"Start a Trial"}/>
+                                 <SingleExpartContent image="2" head1={"Try It Out"} head2={"Now"} para={"Experience the Power of AI Shoe Analyzer Today!"} btn={"Start a Trial"} Link1={"/upload"}/>
                               </div>
                            </div>
                         </div>

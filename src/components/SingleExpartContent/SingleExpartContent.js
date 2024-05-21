@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SingleExpartContent = ({image,head1, head2,para,btn}) => {
+const SingleExpartContent = ({image,head1, head2,para,btn, Link1}) => {
     return (
         <>
             <div className="expart__tab-content white-bg">
@@ -11,7 +11,7 @@ const SingleExpartContent = ({image,head1, head2,para,btn}) => {
                         <div className="expart__content">
                             <h3>{head1} <br /> {head2}</h3>
                             <p>{para}</p>
-                            <Link to="/about" className="z-btn">{btn}</Link>
+                            <Link to={Link1} className="z-btn">{btn}</Link>
                         </div>
                     </div>
                 </div>
