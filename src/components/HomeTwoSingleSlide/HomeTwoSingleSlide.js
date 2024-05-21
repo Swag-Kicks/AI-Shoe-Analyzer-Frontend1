@@ -26,7 +26,7 @@ const HomeTwoSingleSlide = ({ slider_class,content_class, attr_1, attr_2, attr_3
                          {attr_2}
                         <p className=''>{attr_3}<br/>{attr_4}</p>
                         <div className="slider__btn">
-                           <Link to="/contact" className="z-btn z-btn-transparent">{btn_text}</Link>
+                           <Link to="/upload" className="z-btn z-btn-transparent">{btn_text}</Link>
                         </div>
                      </div>
                   </div>
