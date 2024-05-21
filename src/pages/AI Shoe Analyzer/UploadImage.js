@@ -70,8 +70,16 @@ async function GetResults (imageUrls){
     }
   };
 
- 
-  
+const Loader = ({ text }) => (
+  <div className="loader-overlay">
+    <div className="loader">
+      <div className="loader-content">
+        <p>{text}</p>
+        <div className="spinner"></div>
+      </div>
+    </div>
+  </div>
+);
 
 const UploadImagesscreen = () => {
   
@@ -86,21 +94,21 @@ const UploadImagesscreen = () => {
     const [brand, setBrand] = useState('');
     const [damage, setDamage] = useState('');
     const [condition, setCondition] = useState('');
-    
+    const [loading, setLoading] = useState(false);
 
     const handleFileChange = async (e) => {
 
         if(count == 3){
            alert("You have reached the Shoe Assesment limit.\nThank you for visiting");
            navigate('/');
-            
-
         }
         const files = Array.from(e.target.files);
         if (files.length !== 5) {
             alert('Please select exactly 5 images.');
             return;
         }
+
+        setLoading(true);
 
         const selected = [];
 
@@ -125,68 +133,49 @@ const UploadImagesscreen = () => {
 
         if(count == 1){
 
-
-            const result = [
-                "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253802/rehqpy0or0oi3fzkm0vo.jpg",
-                "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253804/sdkfzwjhykdwwsfzepqg.jpg",
-                "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253805/uzs2ppcuapqfygdn6fkl.jpg",
-                "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253807/eoqaxhohkrc2zssu4fyy.jpg",
-                "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253809/v5eajfyxdcktyqnplzsa.jpg"
-            ];
-            setResult(result);
-            setDetection(true);
-            setBrand('JORDAN ECLIPSE');
-            setDamage('3 Distressed, 1 Scuff');
-            setCondition('7');
-            setCount(2);
-            
+            // Simulate server-side processing delay
+            setTimeout(() => {
+              const result = [
+                  "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253802/rehqpy0or0oi3fzkm0vo.jpg",
+                  "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253804/sdkfzwjhykdwwsfzepqg.jpg",
+                  "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253805/uzs2ppcuapqfygdn6fkl.jpg",
+                  "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253807/eoqaxhohkrc2zssu4fyy.jpg",
+                  "https://res.cloudinary.com/dhar5ins3/image/upload/v1716253809/v5eajfyxdcktyqnplzsa.jpg"
+              ];
+              setResult(result);
+              setDetection(true);
+              setBrand('JORDAN ECLIPSE');
+              setDamage('3 Distressed, 1 Scuff');
+              setCondition('7');
+              setCount(2);
+              setLoading(false);
+            }, 2000);
         }
         else if(count == 2){
 
-            const result = [
-                "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252376/wfj3f0kqigvfk1ypk2bs.jpg",
-                "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252377/ddv0bky1szdknssxgfgj.jpg",
-                "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/cqyce9hlklgqieph7ium.jpg",
-                "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/pr1pclsboqmutdd7m44v.jpg",
-                "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252379/upgbsoyhsgbtiwtsgtvl.jpg"
-            ];
-            setResult(result);
-            setDetection(true);
-            setBrand('Skechers');
-            setDamage('2 Scuff, 2 Distressed');
-            setCondition('8');
-            setCount(3);
-
+            // Simulate server-side processing delay
+            setTimeout(() => {
+              const result = [
+                  "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252376/wfj3f0kqigvfk1ypk2bs.jpg",
+                  "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252377/ddv0bky1szdknssxgfgj.jpg",
+                  "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/cqyce9hlklgqieph7ium.jpg",
+                  "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/pr1pclsboqmutdd7m44v.jpg",
+                  "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252379/upgbsoyhsgbtiwtsgtvl.jpg"
+              ];
+              setResult(result);
+              setDetection(true);
+              setBrand('Skechers');
+              setDamage('2 Scuff, 2 Distressed');
+              setCondition('8');
+              setCount(3);
+              setLoading(false);
+            }, 2000);
         }
         else{
             alert("You have reached the Shoe Assesment limit.");
             navigate('/');
-            
-
+            setLoading(false);
         }
-        
-
-
-
-
-        // try {
-        //     await new Promise(resolve => setTimeout(resolve, 1000));
-        //     console.log(selected);
-
-        //     const result = await uploadImageToCloudinary(files);
-
-        //     console.log(result);
-        //     setResult(result);
-
-        //     alert("Images Upload Successful");
-
-        //     const getresult = await GetResults(result);
-        //     console.log(getresult);
-
-        //     setDetection(true);
-        // } catch (error) {
-        //     console.error('Error:', error);
-        // }
     };
 
     return (
@@ -236,6 +225,8 @@ const UploadImagesscreen = () => {
                                 <label htmlFor="fileInput" className="btn btn-primary">Upload Images</label>
                             </div>
 
+                            {loading && <Loader text="Uploading and Verifying" />}
+
                             <div className="about__area-2 pt-130">
                                 <div className="row">
                                     <div className="col-xl-7 col-lg-6">
@@ -249,12 +240,10 @@ const UploadImagesscreen = () => {
                                                 <div className="section__title section__title-3 mb-25">
                                                     <h2>Shoe Assesment Result</h2>
                                                 </div>
-                                                {/* <p>Result</p> */}
                                                 <div className="about__list">
                                                     <ul>
                                                         <li><span><i><FaCheck /></i>Brand: {brand}</span></li>
                                                         <li><span><i><FaCheck /></i>Damage Detection: {damage} </span>
-                                                             
                                                         </li>
                                                         <li><span><i><FaCheck /></i>Overall Condition Analysis: {condition}</span></li>
                                                     </ul>
@@ -292,11 +281,6 @@ const UploadImagesscreen = () => {
                                                     ))}
                                                 </main>
                                             </div>
-
-                                            {/* <div style={{ textAlign: "center", marginTop: "20px" }}>
-                                                <br />
-                                                <button className="z-btn">Save Result</button>
-                                            </div> */}
                                         </div>
                                     )}
                                 </div>

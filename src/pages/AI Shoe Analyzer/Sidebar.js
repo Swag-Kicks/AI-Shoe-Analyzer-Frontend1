@@ -7,7 +7,7 @@ import { IoSettingsSharp } from "react-icons/io5"
 // import MenuIcon from '@mui/icons-material/Menu';
 // import CloseIcon from '@mui/icons-material/Close';
 // import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { confirmAlert } from 'react-confirm-alert';
+// import { confirmAlert } from 'react-confirm-alert';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { FiUpload } from "react-icons/fi";
@@ -27,28 +27,28 @@ export const Sidebar = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    confirmAlert({
-      title: 'Confirm Logout',
-      message: 'Are you sure you want to logout?',
-      buttons: [
-        {
-          label: 'Yes',
-          onClick: () => {
-              // Clear localStorage items
-              localStorage.removeItem('user_id');
-              localStorage.removeItem('company_id');
-              localStorage.removeItem('token');
-              localStorage.removeItem('store_id');
-            // Perform logout action here
-            navigate("/");
-          }
-        },
-        {
-          label: 'No',
-          onClick: () => {} // Do nothing if user cancels
-        }
-      ]
-    });
+    // confirmAlert({
+    //   title: 'Confirm Logout',
+    //   message: 'Are you sure you want to logout?',
+    //   buttons: [
+    //     {
+    //       label: 'Yes',
+    //       onClick: () => {
+    //           // Clear localStorage items
+    //           localStorage.removeItem('user_id');
+    //           localStorage.removeItem('company_id');
+    //           localStorage.removeItem('token');
+    //           localStorage.removeItem('store_id');
+    //         // Perform logout action here
+    //         navigate("/");
+    //       }
+    //     },
+    //     {
+    //       label: 'No',
+    //       onClick: () => {} // Do nothing if user cancels
+    //     }
+    //   ]
+    // });
   }
 
   return (
