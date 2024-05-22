@@ -35,7 +35,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "client": "cd Client && npm install && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run Client\"",
+    "heroku-postbuild": "cd Client && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": [
