@@ -11,8 +11,8 @@
     "server": "node index.js",
     "start": "node index.js",
     "client": "cd Client && npm install && npm start",
-    "dev": "concurrently --kill-others-on-fail \"npm run start\"",
-    "heroku-postbuild": "cd Client && npm install"
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run Client\"",
+    "heroku-postbuild": "cd Client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
