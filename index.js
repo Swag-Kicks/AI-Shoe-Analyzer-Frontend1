@@ -8,7 +8,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.resolve(__dirname, './Client/build')));
+app.use(express.static(path.resolve(__dirname, './Client/public')));
 
 app.get('/api',(req,res)=>{
     res.send("Alive")
@@ -28,5 +28,5 @@ app.listen(PORT,()=>{
 })
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Client', 'public', 'index.html'));
   });
