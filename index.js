@@ -22,13 +22,11 @@ app.use("/auth",require("./routes/jwtAuth"))
 app.use("/dashboard",require("./routes/dashboard"))
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, './areesha/build')));
+app.use(express.static(path.resolve(__dirname, './Client/build')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Client', 'areesha', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Client', 'build', 'index.html'));
   });
-
-
 app.listen(PORT,()=>{
     console.log("App is Running")
 })

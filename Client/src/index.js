@@ -6,14 +6,17 @@ import 'react-modal-video/scss/modal-video.scss';
 import 'react-image-lightbox/style.css';
 import './index.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.Fragment>
-    <AllContext>
-      <App />
-    </AllContext>
-  </React.Fragment>,
-  document.getElementById('root')
+  <AllContext>
+    <App />
+  </AllContext>
+</React.Fragment>
 );
+reportWebVitals();
 
 
