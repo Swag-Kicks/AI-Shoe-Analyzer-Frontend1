@@ -8,7 +8,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.resolve(__dirname, './Client/src')));
+
 
 app.get('/api',(req,res)=>{
     res.send("Alive")
@@ -21,12 +21,15 @@ app.use("/auth",require("./routes/jwtAuth"))
 
 app.use("/dashboard",require("./routes/dashboard"))
 
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, './areesha/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Client', 'areesha', 'index.html'));
+  });
 
 
 app.listen(PORT,()=>{
     console.log("App is Running")
 })
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Client', 'src', 'index.js'));
-  });
