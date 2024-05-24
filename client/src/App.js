@@ -16,12 +16,12 @@ import UploadScreen from './pages/AI Shoe Analyzer/UploaderScreen';
 import Dashboard from './pages/AI Shoe Analyzer/Dashboard';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import LoginDesign from './pages/AI Shoe Analyzer/Design';
+import LoginDesign from './pages/AI Shoe Analyzer/LoginScreen';
 import SignUpDesign from './pages/AI Shoe Analyzer/Signup';
-import EmployeeRecords from './pages/AI Shoe Analyzer/ViewEmployee';
-import Evalaute from "./pages/AI Shoe Analyzer/DesignProduct";
+import EmployeeRecords from './pages/AI Shoe Analyzer/Company_ViewEmployee';
+import Evalaute from "./pages/AI Shoe Analyzer/evaluatorscreen";
 
-import CompanyDashboard from './pages/AI Shoe Analyzer/CompanyDashboard';
+import CompanyDashboard from './pages/AI Shoe Analyzer/Dashboardscreen';
 
 
 
@@ -63,7 +63,7 @@ function App() {
                 <Navigate to="/dashboard" replace />} 
             />
             <Route 
-              path="/register" 
+              path="/signup" 
               element={!isAuthenticated ? 
                 <SignUpDesign setAuth={setIsAuthenticated} /> : 
                 <Navigate to="/dashboard" replace />} 

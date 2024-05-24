@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UploadImagesscreen from './UploadImage';
+import UploadImagesscreen from './uploader_UploadImage';
 import PageHelmet from '../../components/shared/PageHelmet';
-import Sidebar from './Sidebar';
+import Sidebar from './uplader_Sidebar';
 
 const UploadScreen = () => {
    

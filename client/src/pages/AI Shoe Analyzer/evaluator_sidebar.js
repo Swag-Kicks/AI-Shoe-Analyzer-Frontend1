@@ -7,57 +7,48 @@ import { IoSettingsSharp } from "react-icons/io5"
 // import MenuIcon from '@mui/icons-material/Menu';
 // import CloseIcon from '@mui/icons-material/Close';
 // import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-// import { confirmAlert } from 'react-confirm-alert';
+import { confirmAlert } from 'react-confirm-alert';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { FiUpload } from "react-icons/fi";
+import { FcInspection } from "react-icons/fc";
 import { VscHistory } from "react-icons/vsc";
 import { MdOutlineLogout } from "react-icons/md";
-import { FaIdCard } from "react-icons/fa";
-import { IoIosBusiness } from "react-icons/io";
-import { DiGoogleAnalytics } from "react-icons/di";
-import { FcInspection } from "react-icons/fc";
 
-// import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
 
 const navItems = [
-  
-  {icon: <FaIdCard size="23" />,text:"Employee Details"},
-  {icon: <IoIosBusiness size="23" />,text:"Company Details" },
-  { icon: <FiUpload  size="23"/>,text: "Uploading" , path:"/upload"}, //icon: <SettingsIcon />
-  {icon: <FcInspection size="23" />,text:"Product Inspection" },
-  {icon: < VscHistory  size="23"/>, text: "History" , path:"/allproducts"}, //icon: <AddShoppingCartIcon />
-  { icon: <MdOutlineLogout size="23"/>,text: "Logout"},
-   //icon: <LogoutIcon />
+    {icon: <FcInspection size="23" />,text:"Product Inspection", path:"/evaluate"},
+    {icon: < VscHistory  size="23"/>, text: "History" , path:"/allproducts"}, //icon: <AddShoppingCartIcon />
+    { icon: <MdOutlineLogout size="23"/>,text: "Logout"}, //icon: <LogoutIcon />
 ];
 
-export const SidebarDashboard = () => {
+export const Evaluator_Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   const logout = () => {
-    // confirmAlert({
-    //   title: 'Confirm Logout',
-    //   message: 'Are you sure you want to logout?',
-    //   buttons: [
-    //     {
-    //       label: 'Yes',
-    //       onClick: () => {
-    //           // Clear localStorage items
-    //           localStorage.removeItem('user_id');
-    //           localStorage.removeItem('company_id');
-    //           localStorage.removeItem('token');
-    //           localStorage.removeItem('store_id');
-    //         // Perform logout action here
-    //         navigate("/");
-    //       }
-    //     },
-    //     {
-    //       label: 'No',
-    //       onClick: () => {} // Do nothing if user cancels
-    //     }
-    //   ]
-    // });
+    confirmAlert({
+      title: 'Confirm Logout',
+      message: 'Are you sure you want to logout?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => {
+              // Clear localStorage items
+              localStorage.removeItem('user_id');
+              localStorage.removeItem('company_id');
+              localStorage.removeItem('token');
+              localStorage.removeItem('store_id');
+            // Perform logout action here
+            navigate("/");
+          }
+        },
+        {
+          label: 'No',
+          onClick: () => {} // Do nothing if user cancels
+        }
+      ]
+    });
   }
 
   return (
@@ -90,4 +81,4 @@ export const SidebarDashboard = () => {
   );
 };
 
-export default SidebarDashboard;
+export default Evaluator_Sidebar;
