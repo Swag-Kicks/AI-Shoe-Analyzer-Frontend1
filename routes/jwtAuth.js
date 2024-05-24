@@ -91,7 +91,7 @@ router.post("/login",validinfo,async(req,res)=>{
     }
 })
 
-router.get("/verify",authorize ,async(req,res)=>{
+router.post("/verify",authorize ,async(req,res)=>{
     try {
         res.json(true);
         

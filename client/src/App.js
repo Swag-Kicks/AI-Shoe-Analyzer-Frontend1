@@ -33,7 +33,7 @@ function App() {
     const checkAuth = async () => {
       try {
         const response = await fetch('/auth/verify', {
-          method: 'GET',
+          method: 'POST',
           headers: { token: localStorage.token },
         });
         const parseRes = await response.json();
