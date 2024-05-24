@@ -23,7 +23,7 @@ const Login = ({ setAuth }) => {
     try {
       const body = role === 'Owner' ? { email, password } : { username, password };
       const endpoint = role === 'Owner' ? 'auth/login' : 'auth/login-uploader-evaluator';
-      const response = await fetch(`http://localhost:5000/${endpoint}`, {
+      const response = await fetch(`/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
