@@ -7,10 +7,10 @@ const HomeTwoCounter = () => {
             <section className="counter__area counter__area-2 pt-85 pb-85">
                 <div className="container">
                     <div className="row">
-                        <SingleCount counter={1} title="Happy Clients" color="blue-2-color" />
-                        <SingleCount counter={3} title="Project Completed" color="pink-color" />
-                        <SingleCount counter={50} title="Support Given" color="green-4-color" />
-                        <SingleCount counter={4} title="Our Team"  color="orange-color" />
+                        <SingleCount counter={2} title="Happy Clients" color="blue-2-color" />
+                        <SingleCount counter={10} title="Times Faster" color="pink-color" />
+                        <SingleCount counter={50} title="% Less Cost" color="green-4-color" />
+                        <SingleCount counter={98} title="% Accuracy"  color="orange-color" />
                     </div>
                 </div>
             </section>

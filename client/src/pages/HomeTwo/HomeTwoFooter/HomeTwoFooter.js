@@ -11,8 +11,8 @@ const HomeTwoFooter = () => {
                   <div className="container">
                      <div className="row">
                         <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                           <div className="footer__widget mb-45">
-                              <div className="footer__widget-title mb-30">
+                           <div className="footer__widget ">
+                              <div className="footer__widget-title mr-100">
                                  <div className="logo">
                                     <Link to="/">
                                        <img src="assets/img/logo/logo-gradient.png" alt=""/>
@@ -55,9 +55,8 @@ const HomeTwoFooter = () => {
                                  <div className="footer__links">
                                     <ul>
                                        <li><a href="/about">About Us</a></li>
-                                       <li><a href="/homeTwo">Testimonials</a></li>
+                                       <li><a href="/">Testimonials</a></li>
                                        <li><a href="/contact">Consulting</a></li>
-                                       <li><a href="/teamDetails">Partners</a></li>
                                        <li><a href="/contact">Contact Us</a></li>
                                     </ul>
                                  </div>
@@ -72,10 +71,8 @@ const HomeTwoFooter = () => {
                               <div className="footer__widget-content">
                                  <div className="footer__links">
                                     <ul>
-                                       <li><a href="/homeTwo">Customers</a></li>
-                                       <li><a href="/homeTwo">Pricing</a></li>
-                                       <li><a href="#">News</a></li>
-                                       <li><a href="#">Learning Center</a></li>
+                                       <li><a href="/">Customers</a></li>
+                                       <li><a href="/about">Pricing</a></li>
                                        <li><a href="#">Help desk</a></li>
                                        <li><a href="#">Support</a></li>
                                     </ul>

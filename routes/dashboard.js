@@ -16,7 +16,19 @@ router.get("/", authorization, async (req, res) => {
     res.status(500).send("Server error");
   }
 });
-
+// Get the owner of the company
+router.get("/uploader", authorization, async (req, res) => {
+  try {
+    const user = await pool.query(
+      "SELECT owner AS ownerId, id,company_name FROM Company WHERE id = $1",
+      [req.user.id]
+    );
+    res.json(user.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error");
+  }
+});
 // Add a new employee
 router.post("/add", async (req, res) => {
   try {

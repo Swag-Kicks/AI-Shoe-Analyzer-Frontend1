@@ -77,7 +77,7 @@ const HomeOneHeader = () => {
                                           <ul className="submenu">
                                              <li><NavLink to="/home">Home Style 1</NavLink></li>
                                              <li>
-                                                <NavLink to="/homeTwo">Home Style 2</NavLink>
+                                                <NavLink to="">Home Style 2</NavLink>
                                                 <ul className="submenu">
                                                    <li><NavLink to="/home">Home Style 1</NavLink></li>
                                                    <li><NavLink to="/homeTwo">Home Style 2</NavLink></li>

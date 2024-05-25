@@ -19,7 +19,7 @@ const CommonPageHeader = ({ title, subtitle}) => {
 
                         <nav aria-label="breadcrumb">
                            <ol className="breadcrumb">
-                              <li className="breadcrumb-item"><Link to="/homeTwo">Home</Link></li>
+                              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                               <li className="breadcrumb-item active" aria-current="page">{subtitle}</li>
                            </ol>
                         </nav>

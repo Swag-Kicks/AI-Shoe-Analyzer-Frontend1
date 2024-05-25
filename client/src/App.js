@@ -40,7 +40,7 @@ function App() {
         setIsAuthenticated(parseRes === true);
       } catch (error) {
         console.error(error.message);
-        toast.error('Authentication verification failed.');
+       
       }
     };
 
@@ -54,7 +54,6 @@ function App() {
         <ScrollTop/>
         <Routes>
             <Route path="/" element={<HomeTwo/>} />
-            <Route path="/homeTwo" element={<HomeTwo />} />
             <Route path="/companydashboard" element={<CompanyDashboard />} />
             <Route 
               path="/login" 
@@ -83,7 +82,7 @@ function App() {
             <Route path="/develop" element={<Develop />} />
           </Routes>
       </BrowserRouter>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
     </Fragment>
   );
 }

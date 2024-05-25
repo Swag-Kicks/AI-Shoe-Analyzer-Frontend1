@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Sidebar from '../../../components/Sidebar/Sidebar';
 import useGlobalContext from '../../../hooks/useGlobalContext';
-
+import { CiLogin } from "react-icons/ci";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const HomeTwoHeader = () => {
    const [show, setShow] = useState(false);
    const handleClose = () => setShow(false);
@@ -15,17 +16,17 @@ const HomeTwoHeader = () => {
                <div id="header__sticky" className={stickyMenu ? 'sticky header__bottom header__bottom-2' : 'header__bottom header__bottom-2'}>
                   <div className="container">
                      <div className="row align-items-center">
-                        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div className="col-xl-1 col-lg-2 col-md-6 col-sm-6 col-6">
                            <div className="logo">
                               <NavLink to="/">
-                                 {/* AI SHOE ANALYZER */}
-                                 {/* <img src="assets/img/logo/logo.png" alt="logo"/> */}
+                                 {/* <h2> AI Shoe Analyzer</h2> */}
+                                 <img src="assets/img/logo/logo.png" alt="logo"/>
                               </NavLink>
                            </div>
                            <div className="logo-gradient">
                               <NavLink to="/">
                                  {/* AI SHOE ANALYZER */}
-                                 {/* <img src="assets/img/logo/logo-gradient.png" alt="logo"/> */}
+                                 <img src="assets/img/logo/logo-gradient.png" alt="logo"/>
                               </NavLink>
                            </div>
                         </div>
@@ -35,7 +36,7 @@ const HomeTwoHeader = () => {
                                  <nav id="mobile-menu">
                                     <ul>
                                        <li>
-                                          <NavLink to="/homeTwo">Home</NavLink>
+                                          <NavLink to="/">Home</NavLink>
                                        </li>
                                        <li><NavLink to="/about">About Us </NavLink></li>
                                        <li>
@@ -47,15 +48,18 @@ const HomeTwoHeader = () => {
                                        <li>
                                           <NavLink to="/price">Pricing</NavLink>
                                        </li>
-                                       <li><NavLink to="/contact">Contact Us</NavLink></li>
+                                       <li ><NavLink to="/contact">Contact Us</NavLink></li>
+                                       <li><NavLink to="/login" style={{fontSize:"20px"}}>Login <CiLogin /></NavLink></li>
+                                       <li><NavLink to="/signup" style={{fontSize:"20px"}}>  Signup <MdKeyboardDoubleArrowRight /> </NavLink></li>
+                                      
                                     </ul>
                                  </nav>
                               </div>
                               <div className="header__btn d-none d-sm-block d-xl-block ml-50" >
-                                 <Link to="/login" className="z-btn z-btn-white z-btn-white-2">Login</Link>
+                           
                               </div>
                               <div className="header__btn d-none d-sm-block d-xl-block ml-50">
-                                 <Link to="/signup" className="z-btn z-btn-purple z-btn-white-2">Sign Up</Link>
+                                
                               </div>
                               <div onClick={handleShow} className="sidebar__menu d-lg-none">
                                  <div className="sidebar-toggle-btn" id="sidebar-toggle">

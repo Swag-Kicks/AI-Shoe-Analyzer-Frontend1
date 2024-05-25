@@ -7,9 +7,6 @@ const SingleBrandItem = ({img_1,img_2}) => {
             <div className="brand__item">
                <img src={`assets/img/brand/brand-${img_1}.png`} alt=""/>
             </div>
-            <div className="brand__item">
-               <img src={`assets/img/brand/brand-${img_2}.png`} alt=""/>
-            </div>
          </div>
       </>
    );

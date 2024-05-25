@@ -5,6 +5,7 @@ import PageHelmet from '../../components/shared/PageHelmet';
 import HomeAbout from '../Home/HomeAbout/HomeAbout';
 import HomeBrands from '../Home/HomeBrands/HomeBrands';
 import HomeTwoHeader from "../HomeTwo/HomeTwoHeader/HomeTwoHeader"
+import HomeTwoFooter from '../HomeTwo/HomeTwoFooter/HomeTwoFooter';
 
 const About = () => {
    return (
@@ -16,7 +17,7 @@ const About = () => {
          <HomeAbout/>
          {/* <HomeTwoAchievement/> */}
          <HomeBrands/>
-         <Footer/>
+         <HomeTwoFooter/>
       </>
    );
 };

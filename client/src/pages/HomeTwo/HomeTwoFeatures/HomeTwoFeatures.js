@@ -22,7 +22,7 @@ const HomeTwoFeatures = () => {
                            <h2>How <br/>It Works</h2>
                         </div>
                         <p>Discover the Seamless Process of Evaluating Your Shoes with AI Precision.</p>
-                        <Link to="/about" className="z-btn">Step by step guide<i><CgArrowLongRight/></i></Link>
+                        <Link to="" className="z-btn">Step by step guide<i><CgArrowLongRight/></i></Link>
                      </div>
                   </div>
                   <div className="col-xl-6 offset-xl-1 col-lg-6">

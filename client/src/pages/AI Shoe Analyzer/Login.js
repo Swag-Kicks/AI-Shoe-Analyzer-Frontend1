@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css'; // Import your custom CSS file for styling
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = ({ setAuth }) => {
   const [inputs, setInputs] = useState({ email: '', password: '', username: '' });
@@ -35,13 +37,14 @@ const Login = ({ setAuth }) => {
       if (parse.token) {
         localStorage.setItem('token', parse.token);
         setAuth(true);
-        alert('Successfully Logged In');
+        toast.done('Successfully Logged In');
       } else {
         setAuth(false);
-        alert(parse.message);
+        toast.error(parse.message);
       }
     } catch (error) {
       console.error(error.message);
+      toast.error('Internal Server Issue.');
     }
   };
 

@@ -8,13 +8,13 @@ const HomeBrands = () => {
       autoplaySpeed: 10000,
       dots: false,
       arrows: false,
-      slidesToShow: 4,
+      slidesToShow: 1,
       slidesToScroll: 1,
       responsive: [
          {
             breakpoint: 1024,
             settings: {
-               slidesToShow: 4,
+               slidesToShow: 1,
                slidesToScroll: 1,
                infinite: true,
             }
@@ -29,7 +29,7 @@ const HomeBrands = () => {
          {
             breakpoint: 576,
             settings: {
-               slidesToShow: 2,
+               slidesToShow: 1,
                slidesToScroll: 1,
             }
          },
@@ -54,21 +54,23 @@ const HomeBrands = () => {
                   </div>
                   <div className="col-xl-6 col-lg-7">
                      <div className="section__title section__title-3 wow fadeInUp" data-wow-delay=".2s">
-                        <h2>More than 7,962 designers use konsul.</h2>
+                        <h2>Trusted by many companies worldwide, </h2>
                      </div>
                      <div className="brand__subtitle mb-90 wow fadeInUp" data-wow-delay=".4s">
-                        <p>Design anything from simple icons to fully featured websites and applications.</p>
+                        <p>our AI Shoe Analyzer has revolutionized the way second-hand shoes are evaluated and sold.</p>
                      </div>
                   </div>
                </div>
                <div className="row">
+               <div className="d-flex container" style={{justifyContent: "center" }}>
+                  <img src={`assets/img/brand/brand-1.png`} className="mr-100" alt="" width={"200px"} height={"200px"}/> 
+                  <img src={`assets/img/brand/brand-2.png`} alt="" width={"200px"} height={"200px"}/>
+                  </div>
+                
 
-                  <Slider className='brand-active' {...settings}>
-                     <SingleBrandItem img_1="1" img_2="5" />
-                     <SingleBrandItem img_1="2" img_2="6" />
-                     <SingleBrandItem img_1="3" img_2="7" />
-                     <SingleBrandItem img_1="4" img_2="8" />
-                     <SingleBrandItem img_1="2" img_2="6" />
+
+                  <Slider className='brand-active' >
+                 
                   </Slider>
 
                </div>

@@ -15,7 +15,6 @@ const Services = () => {
          <HomeTwoHeader/>
          <CommonPageHeader title="Services" subtitle="Services" />
          <HomeServices />
-         <HomeCapabilities/>
          <HomeThreeSecondServices />
          <CommonCtaArea/>
          <HomeTwoFooter />
