@@ -7,14 +7,14 @@ import { IoSettingsSharp } from "react-icons/io5"
 // import MenuIcon from '@mui/icons-material/Menu';
 // import CloseIcon from '@mui/icons-material/Close';
 // import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { confirmAlert } from 'react-confirm-alert';
+// import { confirmAlert } from 'react-confirm-alert';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { FcInspection } from "react-icons/fc";
 import { VscHistory } from "react-icons/vsc";
 import { MdOutlineLogout } from "react-icons/md";
 
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
+// import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
 
 const navItems = [
     {icon: <FcInspection size="23" />,text:"Product Inspection", path:"/evaluate"},
@@ -27,28 +27,28 @@ export const Evaluator_Sidebar = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    confirmAlert({
-      title: 'Confirm Logout',
-      message: 'Are you sure you want to logout?',
-      buttons: [
-        {
-          label: 'Yes',
-          onClick: () => {
-              // Clear localStorage items
-              localStorage.removeItem('user_id');
-              localStorage.removeItem('company_id');
-              localStorage.removeItem('token');
-              localStorage.removeItem('store_id');
-            // Perform logout action here
-            navigate("/");
-          }
-        },
-        {
-          label: 'No',
-          onClick: () => {} // Do nothing if user cancels
-        }
-      ]
-    });
+    // confirmAlert({
+    //   title: 'Confirm Logout',
+    //   message: 'Are you sure you want to logout?',
+    //   buttons: [
+    //     {
+    //       label: 'Yes',
+    //       onClick: () => {
+    //           // Clear localStorage items
+    //           localStorage.removeItem('user_id');
+    //           localStorage.removeItem('company_id');
+    //           localStorage.removeItem('token');
+    //           localStorage.removeItem('store_id');
+    //         // Perform logout action here
+    //         navigate("/");
+    //       }
+    //     },
+    //     {
+    //       label: 'No',
+    //       onClick: () => {} // Do nothing if user cancels
+    //     }
+    //   ]
+    // });
   }
 
   return (
