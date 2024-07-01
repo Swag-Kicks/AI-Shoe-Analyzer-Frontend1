@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { CgArrowLongRight } from 'react-icons/cg';
 import { FaCheck } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import './style.css'; 
 import Slider from "react-slick";
+import Loader from './loader'; // Import the Loader component
 import "./styles.css"
 
 const ImageCard = ({ imageUrl }) => {
@@ -69,17 +70,6 @@ async function GetResults (imageUrls){
       alert('An error occurred while processing the images.');
     }
   };
-
-const Loader = ({ text }) => (
-  <div className="loader-overlay">
-    <div className="loader">
-      <div className="loader-content">
-        <p>{text}</p>
-        <div className="spinner"></div>
-      </div>
-    </div>
-  </div>
-);
 
 const UploadImagesscreen = () => {
   
@@ -225,7 +215,7 @@ const UploadImagesscreen = () => {
                                 <label htmlFor="fileInput" className="btn btn-primary">Upload Images</label>
                             </div>
 
-                            {/* {loading && <Loader text="Uploading and Verifying" />} */}
+                            {loading && <Loader text="Uploading and Verifying" />} {/* Render the Loader component when loading state is true */}
 
                             <div className="about__area-2 pt-130">
                                 <div className="row">
@@ -264,7 +254,7 @@ const UploadImagesscreen = () => {
                                                         <li><span><i><FaCheck /></i>Overall Condition Analysis</span></li>
                                                     </ul>
                                                 </div>
-                                                <Link to="/about" className="z-btn">What we do<i><CgArrowLongRight /></i></Link>
+                                                {/* <Link to="/about" className="z-btn">What we do<i><CgArrowLongRight /></i></Link> */}
                                             </div>
                                         </div>
                                     )}

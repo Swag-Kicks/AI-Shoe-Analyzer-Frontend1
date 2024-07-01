@@ -56,10 +56,10 @@ const ProductInspection = () => {
                             <tbody>
                                 {/* Example row, replace with dynamic data */}
                                 <tr>
-                                    <td>Product 1</td>
-                                    <td>Brand 1</td>
-                                    <td>Some damages</td>
-                                    <td>Good</td>
+                                    <td>Response 1</td>
+                                    <td>Skechers</td>
+                                    <td>Scuff, Destressed</td>
+                                    <td>8</td>
                                     <td>
                                         <button className="btn btn-primary mr-10 mb-5" title="View"><FaEye /></button>
                                         <button className="btn btn-success mr-10 mb-5" title="Accept"><FaCheck /></button>
@@ -79,11 +79,13 @@ const ProductInspection = () => {
                     <div className="col-xl-4 col-lg-6" style={{alignContent:"center"}}>
                         <div className=" p-relative m-img">
                             <main>
-                                <ImageCard imageUrl="assets/img/case/1.png" />
-                                <ImageCard imageUrl="assets/img/case/2.png" />
-                                <ImageCard imageUrl="assets/img/case/3.png" />
-                                <ImageCard imageUrl="assets/img/case/4.png" />
-                                <ImageCard imageUrl="assets/img/case/5.png" />
+                   
+                 
+                                <ImageCard imageUrl= "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252376/wfj3f0kqigvfk1ypk2bs.jpg" />
+                                <ImageCard imageUrl="https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/cqyce9hlklgqieph7ium.jpg" />
+                                <ImageCard imageUrl="https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252378/pr1pclsboqmutdd7m44v.jpg" />
+                                <ImageCard imageUrl= "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252379/upgbsoyhsgbtiwtsgtvl.jpg" />
+                                <ImageCard imageUrl= "https://res.cloudinary.com/dkkv1pkcu/image/upload/v1716252377/ddv0bky1szdknssxgfgj.jpg" />
                             </main>
                         </div>
                      </div>
@@ -100,33 +102,30 @@ const ProductInspection = () => {
                                         <ul class="list-group">
                                         <li class="list-group-item">Left
                                             <ul class="list-group">
-                                            <li className="list-group-item">Item 2a</li> 
-                                                <li class="list-group-item">Item 2b</li>
+                                            <li className="list-group-item">Scuff</li> 
+                                           
                                             </ul>
                                         </li>
                                         <li class="list-group-item">Right
                                             <ul class="list-group">
-                                                <li class="list-group-item">Item 3a</li>
-                                                <li class="list-group-item">Item 3b</li>
+                                                <li class="list-group-item">Scuff</li>
                                                 
                                             </ul>
                                         </li>
                                         <li class="list-group-item"> Bottom
                                             <ul class="list-group">
-                                                <li class="list-group-item">Item 3a</li>
-                                                <li class="list-group-item">Item 3b</li>
+                                                <li class="list-group-item">Distressed</li>
                                             </ul>
                                         </li>
                                         <li class="list-group-item"> Back
                                             <ul class="list-group">
-                                                <li class="list-group-item">Item 3a</li>
-                                                <li class="list-group-item">Item 3b</li>
+                                                <li class="list-group-item">Distressed</li>
                                             </ul>
                                         </li>
                                         <li class="list-group-item"> Front
                                             <ul class="list-group">
-                                                <li class="list-group-item">Item 3a</li>
-                                                <li class="list-group-item">Item 3b</li>
+                                                <li class="list-group-item">Distressed</li>
+                                                <li class="list-group-item">Scuff</li>
                                             </ul>
                                         </li>
                                         <button className="login-btn"> 
@@ -135,7 +134,7 @@ const ProductInspection = () => {
                                         <br/>
                                     </ul>
                                     <span className="d-block"><h3>Condition</h3></span>
-                                        <li class="list-group-item">//condition</li>
+                                        <li class="list-group-item">8</li>
                                      </ul>
                                 </div>
                           

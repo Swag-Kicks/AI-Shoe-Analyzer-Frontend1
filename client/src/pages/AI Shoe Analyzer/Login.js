@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import './Login.css'; // Import your custom CSS file for styling
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -20,8 +20,7 @@ const Login = ({ setAuth }) => {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault();
-
+    e.preventDefault();  
     try {
       const body = role === 'Owner' ? { email, password } : { username, password };
       const endpoint = role === 'Owner' ? 'auth/login' : 'auth/login-uploader-evaluator';
@@ -38,6 +37,7 @@ const Login = ({ setAuth }) => {
         localStorage.setItem('token', parse.token);
         setAuth(true);
         toast.done('Successfully Logged In');
+        Navigate("/CompanyDashboard");
       } else {
         setAuth(false);
         toast.error(parse.message);

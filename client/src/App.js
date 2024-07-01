@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-
+import EmployeeDashboard from './pages/AI Shoe Analyzer/Company_emp_screen';
 import ScrollTop from './components/ScrollTop';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
@@ -59,13 +59,13 @@ function App() {
               path="/login" 
               element={!isAuthenticated ? 
                 <LoginDesign setAuth={setIsAuthenticated} /> : 
-                <Navigate to="/dashboard" replace />} 
+                <Navigate to="/companydashboard" replace />} 
             />
             <Route 
               path="/signup" 
               element={!isAuthenticated ? 
                 <SignUpDesign setAuth={setIsAuthenticated} /> : 
-                <Navigate to="/dashboard" replace />} 
+                <Navigate to="/signup" replace />} 
             />
             <Route path="/about" element={<About/>} />
             <Route path="/services" element={<Services/>} />
@@ -80,9 +80,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/price" element={<Price />} />
             <Route path="/develop" element={<Develop />} />
+            <Route path="/addemployee" element={<EmployeeDashboard />} />
           </Routes>
       </BrowserRouter>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </Fragment>
   );
 }

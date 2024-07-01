@@ -5,18 +5,18 @@ import Body from "./Company_body";
 import Dashboard from "./company_card";
 import AddEmployee from "./Company_Add_emp";
 
-const CompanyDashboard = () => {
+const EmployeeDashboard = () => {
     return (
       
       <>
         <SidebarDashboard/>
         <DesignDashboard/>
-        <Dashboard/>
-        {/* <AddEmployee/> */}
+        {/* <Dashboard/> */}
+        <AddEmployee/>
       </>
         
        
     )
   }
   
-  export default CompanyDashboard
+  export default EmployeeDashboard

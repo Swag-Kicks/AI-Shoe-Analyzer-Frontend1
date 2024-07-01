@@ -22,9 +22,9 @@ import { FcInspection } from "react-icons/fc";
 
 const navItems = [
   
-  {icon: <FaIdCard size="23" />,text:"Employee Details"},
+  {icon: <FaIdCard size="23" />,text:"Employee Details", path:"/addemployee"},
   {icon: <IoIosBusiness size="23" />,text:"Company Details" },
-  { icon: <FiUpload  size="23"/>,text: "Uploading" , path:"/upload"}, //icon: <SettingsIcon />
+  { icon: <FiUpload  size="23"/>,text: "Product Analysis" , path:"/upload"}, //icon: <SettingsIcon />
   {icon: <FcInspection size="23" />,text:"Product Inspection", path:"/evaluate"},
   {icon: < VscHistory  size="23"/>, text: "History" , path:"/allproducts"}, //icon: <AddShoppingCartIcon />
   { icon: <MdOutlineLogout size="23"/>,text: "Logout"},

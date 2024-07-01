@@ -16,7 +16,7 @@ const HomeTwoFaq = () => {
 
                         <div className="accordion" id="accordionExample">
 
-                           <div className="card accordion-item">
+                           <div className="mb-20">
                               <div className="accordion-header" id="headingOne">
                                  <h5 className="mb-0">
                                     <button className="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -32,7 +32,7 @@ const HomeTwoFaq = () => {
                               </div>
                            </div>
 
-                           <div className="card accordion-item">
+                           <div className="mb-20">
                               <div className="accordion-header" id="headingTwo">
                                  <h5 className="mb-0">
                                     <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -47,7 +47,7 @@ const HomeTwoFaq = () => {
                               </div>
                            </div>
 
-                           <div className="card accordion-item">
+                           <div className="mb-20">
                               <div className="accordion-header" id="headingThree">
                                  <h5 className="mb-0">
                                     <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -62,7 +62,7 @@ const HomeTwoFaq = () => {
                               </div>
                               
                            </div>
-                           <div className="card accordion-item">
+                           <div className="mb-20">
                               <div className="accordion-header" id="headingFour">
                                  <h5 className="mb-0">
                                     <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">

@@ -17,7 +17,7 @@ import { MdOutlineLogout } from "react-icons/md";
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Importing CSS for react-confirm-alert
 
 const navItems = [
-  { icon: <FiUpload  size="23"/>,text: "Uploading" , path:"/upload"}, //icon: <SettingsIcon />
+  { icon: <FiUpload  size="23"/>,text: "Product Analysis" , path:"/upload"}, //icon: <SettingsIcon />
   {icon: < VscHistory  size="23"/>, text: "History" , path:"/allproducts"}, //icon: <AddShoppingCartIcon />
   { icon: <MdOutlineLogout size="23"/>,text: "Logout"}, //icon: <LogoutIcon />
 ];
